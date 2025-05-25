@@ -1,80 +1,160 @@
-# Ex No: 06 - Design & Implementation of 2-Bit Multiplier Using Cadence Virtuoso
-
-## Aim
-The aim is to design and implement a **2-bit Multiplier** using **Cadence Virtuoso** and verify its functionality through transient analysis simulation.
-
-## Tools Required
-### Cadence Virtuoso Suite
-- **Virtuoso Schematic Editor** (for circuit design)
-- **Spectre Simulator** (for circuit simulation)
-
-### Process Design Kit (PDK)
-- CMOS technology library
-
-### Computer System
-- Minimum **4GB RAM** and a **multi-core processor**
-
-## Procedure
-
-### 1. Launch Cadence Virtuoso Environment:
-- Open the **Cadence Virtuoso** tool and set up the working library.
-- Create a new **schematic cell view** for the **2-bit Multiplier** design.
-
-### 2. Schematic Design:
-- Select **NMOS and PMOS transistors** from the library.
-- Construct the **2-bit Multiplier circuit** using **AND and ADDER logic gates**.
-- Connect the inputs (**A1, A0, B1, B0**) and outputs (**P3, P2, P1, P0**) properly.
-
-### 3. Simulation:
-- Check the design for **errors** and proceed with simulation.
-- Launch the **Analog Design Environment (ADE)**.
-- Perform **transient analysis** to verify the multiplication logic.
-- Set up **input stimulus** and analyze the **output waveform**.
-
-## Circuit Diagram
-
-![image](https://github.com/user-attachments/assets/a56c4672-c7a5-44a8-908f-860243dc365d)
+# Ex No: 06 Design-Implementation-of-2-Bit-Multiplier-using-Cadence-Tools
+     
 
 
-## Truth Table for 2-Bit Multiplier
 
-![image](https://github.com/user-attachments/assets/fdb01f7d-60c1-4605-8462-c4dd954c5602)
+## Aim:
 
+To design and implement a 2-bit multiplier circuit using Cadence EDA tools, simulate its functionality, and to understand its application in digital arithmetic operations.
 
-## Schematic Diagram
+## Tools Required:
 
-### Schematicand Symbol of 2-Input AND Gate:
+•	Personal Computer
 
-![Screenshot 2025-05-10 160454](https://github.com/user-attachments/assets/7a700f59-c4b4-4006-b791-0a4edf7d1e57)
-
-![Screenshot 2025-05-10 160505](https://github.com/user-attachments/assets/4031c7a7-7c0f-4397-a936-ac4f90c4f402)
-
-### Schematicand Symbol of 2-Input EX-OR Gate:
-
-![Screenshot 2025-05-10 160515](https://github.com/user-attachments/assets/880ad1be-e8b3-4111-b2ea-2b2c7eb1fd14)
-
-![Screenshot 2025-05-10 160523](https://github.com/user-attachments/assets/4230854b-5f8e-43d0-9875-258b457660e3)
-
-### Schematicand Symbol of Half Adder:
-![Screenshot 2025-05-10 160535](https://github.com/user-attachments/assets/5d98f983-d6b7-42b9-8f16-17407b2010b2)
-
-![Screenshot 2025-05-10 161100](https://github.com/user-attachments/assets/bfaa7af0-6785-46e4-b434-87d677af5807)
-
-### Schematic of 2-Bit Multiplier:
-![Screenshot 2025-05-10 162446](https://github.com/user-attachments/assets/5b4b78a1-5812-4789-85ec-60324c2b5968)
-
-## Output
-### Transient Analysis Output:
-![Screenshot 2025-05-15 153033](https://github.com/user-attachments/assets/2c94f184-525c-49ba-8733-27c982f0dffa)
-
-![image](https://github.com/user-attachments/assets/55864d90-af08-4836-bc90-4cbba80573f8)
+•	Cadence Virtuoso Software
 
 
-![Screenshot 2025-05-15 152538](https://github.com/user-attachments/assets/694df39e-3505-4cf1-ae99-21bc428300b7)
+## Circuit Diagram:
 
-Run Time : 200ns
+![IMG-20241115-WA0007](https://github.com/user-attachments/assets/bfe47e43-607a-4fd4-9f91-3610e32b27bd)
 
-## Results
-1. Successfully designed the **2-bit Multiplier** schematic using **Cadence Virtuoso**.
-2. Performed **transient analysis**, verifying the correct operation of the **Multiplier**.
-3. Observed **correct multiplication behavior** in response to input signals.
+
+## SCHEMATIC SIMULATION:
+
+PROCEDURE FOR CREATING THE SCHEMATIC SIMULATION
+Commands to get into Cadence
+1.	Right Click and open the terminal window
+2.	Type the following commands as follows and press enter.
+•	csh
+•	source /cadence/install/cshrc
+•	virtuoso 
+Procedure for Schematic simulation using Cadence
+
+1.	Now two windows must open i)virtuoso/command interpreter window ii)”Whats New…”
+2.	Close the 2nd window
+3.	Use 1st window i.e virtuoso window(CIW) for further processing.
+i.	Create a New Library
+ii.	Create Schematic Cell view.
+iii.	Create the Symbol for schematic Cell view.
+iv.	Create the test Cell view.
+v.	Analog simulation by spectre
+
+
+i)	Procedure for Creating New Library.
+
+•	File –New – Library
+
+•	Name : Give name for ur library Ex: VLSILAB_EXP_1
+
+•	Enable Attach to an existing technology library, Click OK
+
+•	Attach the library to the technology library gpdk045.Click OK
+ii)	Create Schematic Cell view.
+•	Go to 1st window i.e virtuoso(CIW)
+
+•	File-New-Cell view
+
+•	Setup the new file form
+	  Library: Select the one you a created.
+	  Cell : Give the experiment name Ex: Inverter View_Schematic
+	  Type: Schematic press OK
+•	Add the required components from the libraries and make the connections.
+
+• Go to instance fixed menu or use shortcut key “I” from keypad to go instances
+
+•	Click on browse. This opens the library browser
+
+•	Now select the appropriate library for components like 
+• Gpdk45 ------------------------nmos1v,  pmos1v
+
+• Create Input and Output pins
+
+•	Make the connections by using fixed narrow wire key
+
+•	Click Check and Save button
+![Screenshot 2024-11-14 143124](https://github.com/user-attachments/assets/71e954f9-9f3c-4bd0-b5ea-9a9fd11226ee)
+
+
+ 
+iii)	Creating the Symbol for schematic Cell view
+
+•	In the schematic window, execute 
+
+•	Create – Cell view – From Cell view
+
+•	The cell view from cell view window appears
+
+•	Check Lib Name, Cell Name, From View name must be schematic Press ok
+
+•	Now Symbol generation form appears. Click Ok If No changes required
+
+•	A new window with with default symbol is created.
+
+•	Edit the symbol if you want to give actual symbol shape else continue.
+
+•	Execute Create-Cell view-from cell view
+
+•	Library Name and Cell Name must be same which you have used for schematic. Press OK
+
+•	Check for the position of pin side.Prss OK
+
+•	Edit for the shape by Create-Shape-Choose required options to edit.
+![Screenshot 2024-11-14 153549](https://github.com/user-attachments/assets/46ec3836-5b20-4623-9b40-0453f27a09cd)
+
+
+
+
+iv)	Creating the new test cell view
+
+•	Go to CIW window, Execute File-New-Cell view
+
+•	Setup the new file form
+
+•	Library: Select the one you created.
+
+•	Cell: Cell name must be different from the name used in schematic cell view. Ex: Inverter_test
+
+•	View: Schematic
+
+•	Type: Schematic press OK
+
+•	Follow the step 3(ii)  to make the required connections
+![Screenshot 2024-11-14 143110](https://github.com/user-attachments/assets/c168141c-7f84-48f1-8291-31ff284ee445)
+
+
+ 
+
+## Analog simulation by SPECTRE.
+•	In test cell view window
+
+•	Launch – ADE L(Analog Design Environment)
+
+•	Execute Setup—Simulation/directory/Host A new window opens
+
+•	Set the simulation window to spectre and click ok
+
+•	Execute Analysis – Choose. A window opens.
+
+•	Select the type and set the specifications and press OK
+
+•	Execute Output s—to be plotted – Select on Schematic
+
+•	Then Select the INPUT WIRE(Vin ) and OUTPUT WIRE(Vout) from your test Schematic using mouse
+
+•	Execute Simulation -- Net list and Run
+![Screenshot 2024-11-14 143432](https://github.com/user-attachments/assets/005a8470-c662-46e9-bbf9-8d375491cd6b)
+
+
+
+## For Transient Analysis Settings 
+![Screenshot 2024-11-14 143502](https://github.com/user-attachments/assets/433ba580-ec0a-42b6-8c96-6f1b67b8439e)
+
+## Output:
+![Screenshot 2024-11-14 143021](https://github.com/user-attachments/assets/9254b325-b251-4e49-9eae-f95f05d92b3e)
+
+
+  
+
+
+## Result:
+The design and implementation of the 2-bit multiplier using Cadence EDA tools were successfully carried out. The simulation results confirmed the correct operation of the multiplier for all input combinations. 
